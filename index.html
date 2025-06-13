@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stargames Informática - Informática e Serviços</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #f4f7f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0b3d91;
+      color: white;
+      padding: 15px 30px;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    header .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      cursor: pointer;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li {
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    nav ul li:hover {
+      color: #f0a500;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 110px auto 50px;
+      padding: 0 20px;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 0 0 10px rgba(0,0,0,0.7);
+      border-radius: 8px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      max-width: 800px;
+      text-align: center;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 25px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    .service-card h3 {
+      margin-bottom: 15px;
+      color: #0b3d91;
+    }
+
+    .service-card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .about {
+      background: #0b3d91;
+      color: white;
+      padding: 40px 30px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .about h2 {
+      margin-bottom: 15px;
+      font-size: 2rem;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: 0 auto 15px auto;
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    .contact-info {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #ddd;
+      line-height: 1.4;
+    }
+
+    .social-links {
+      margin-top: 15px;
+    }
+
+    .social-links a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.6rem;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #f0a500;
+    }
+
+    #contact {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    #contact h2 {
+      text-align: center;
+      color: #0b3d91;
+      margin-bottom: 20px;
+    }
+
+    #contact-form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    #contact-form input,
+    #contact-form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    #contact-form button {
+      background: #0b3d91;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    #form-status {
+      text-align: center;
+      margin-top: 15px;
+      color: green;
+      display: none;
+    }
+
+    footer {
+      background: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 30px 20px 40px;
+      font-size: 0.9rem;
+    }
+
+    footer .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    footer .contact-footer {
+      margin: 15px 0 25px;
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    footer .social-footer a {
+      color: #aaa;
+      margin: 0 10px;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    footer .social-footer a:hover {
+      color: #f0a500;
+    }
+
+    /* Menu responsivo */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        background: #0b3d91;
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        width: 200px;
+        height: calc(100vh - 60px);
+        padding-top: 20px;
+        transition: right 0.3s ease;
+        border-radius: 0 0 0 8px;
+      }
+
+      nav ul.show {
+        right: 0;
+      }
+
+      nav ul li {
+        padding: 15px 20px;
+      }
+
+      .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 1.8rem;
+        user-select: none;
+      }
+    }
+
+    .menu-toggle {
+      display: none;
+      color: white;
+    }
+  </style>
+  <!-- Ícones FontAwesome para redes sociais -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+  <div class="logo" tabindex="0">Stargames Informática</div>
+  <nav>
+    <ul id="nav-links">
+      <li><a href="#services" style="color:inherit; text-decoration:none;">Serviços</a></li>
+      <li><a href="#about" style="color:inherit; text-decoration:none;">Sobre</a></li>
+      <li><a href="#contact" style="color:inherit; text-decoration:none;">Contato</a></li>
+    </ul>
+  </nav>
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+</header>
+
+<main>
+  <section class="hero" role="banner">
+    <h1>Seu Parceiro em Informática e Manutenção</h1>
+  </section>
+
+  <section id="services">
+    <h2 style="text-align:center; margin-bottom: 30px; color:#0b3d91;">Nossos Serviços</h2>
+    <div class="services">
+      <article class="service-card" tabindex="0">
+        <h3>Manutenção de Computadores</h3>
+        <p>Conserto de hardware, limpeza interna e upgrade de componentes para desempenho máximo.</p>
+      </article>
+
+      <article class="service-card" tabindex="0">
+        <h3>Suporte Técnico Remoto</h3>
+        <p>Assistência rápida e eficiente via acesso remoto para resolver problemas sem sair de casa.</p>
+      </article>
+
+      <article class="service-card" tabindex="0">
+        <h3>Instalação de Redes</h3>
+        <p>Configuração e otimização de redes domésticas e empresariais para internet estável e segura.</p>
+      </article>
+
+      <article class="service-card" tabindex="0">
+        <h3>Consultoria em TI</h3>
+        <p>Planejamento e implementação de soluções tecnológicas personalizadas para seu negócio.</p>
+      </article>
+
+      <article class="service-card" tabindex="0">
+        <h3>Recuperação de Dados</h3>
+        <p>Recuperamos arquivos perdidos ou corrompidos de HDs, SSDs e dispositivos móveis.</p>
+      </article>
+
+      <article class="service-card" tabindex="0">
+        <h3>Venda e Montagem de PCs</h3>
+        <p>Montamos computadores personalizados de acordo com sua necessidade e orçamento.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="about" class="about" role="region" aria-labelledby="about-title">
+    <h2 id="about-title">Quem Somos</h2>
+    <p>Stargames Informática - Loja de informática em Itapira, São Paulo.</p>
+    <p>4,7143 avaliações no Google</p>
+    <p>Opções de serviço: Serviços de reparos · Agendamento on-line · Tem reciclagem de eletrônicos</p>
+    <p class="contact-info">
+      Endereço: Av. Rio Branco, 637 - Centro, Itapira - SP, 13970-070<br />
+      Telefone: (19) 3640-0076<br />
+      Horário de funcionamento: Aberto ⋅ Fecha às 17:30
+    </p>
+
+    <div class="social-links" aria-label="Redes sociais">
+      <a href="https://www.facebook.com/stargamesinformatica/?locale=pt_BR" target="_blank" rel="noopener" aria-label="Facebook Stargames Informática">
+        <i class="fab fa-facebook-square"></i>
+      </a>
+      <a href="https://www.instagram.com/stargamesitapira/" target="_blank" rel="noopener" aria-label="Instagram Stargames Informática">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://api.whatsapp.com/send/?phone=19993262389&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" aria-label="WhatsApp Stargames Informática">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </section>
+
+  <section id="contact" role="region" aria-labelledby="contact-title">
+    <h2 id="contact-title">Contato</h2>
+    <form id="contact-form" aria-label="Formulário de contato">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" required />
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+      
+      <label for="message">Mensagem:</label>
+      <textarea id="message" name="message" required rows="5"></textarea>
+      
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="form-status">Mensagem enviada com sucesso!</p>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-content">
+    &copy; 2025 Stargames Informática. Todos os direitos reservados.
+    <div class="contact-footer">
+      Endereço: Av. Rio Branco, 637 - Centro, Itapira - SP, 13970-070 | Tel: (19) 3640-0076
+    </div>
+    <div class="social-footer" aria-label="Redes sociais no rodapé">
+      <a href="https://www.facebook.com/stargamesinformatica/?locale=pt_BR" target="_blank" rel="noopener" aria-label="Facebook Stargames Informática"><i class="fab fa-facebook-square"></i></a>
+      <a href="https://www.instagram.com/stargamesitapira/" target="_blank" rel="noopener" aria-label="Instagram Stargames Informática"><i class="fab fa-instagram"></i></a>
+      <a href="https://api.whatsapp.com/send/?phone=19993262389&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" aria-label="WhatsApp Stargames Informática"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    status.style.display = 'block';
+    form.reset();
+    setTimeout(() => {
+      status.style.display = 'none';
+    }, 4000);
+  });
+</script>
+
+</body>
+</html>
