@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Stargames Informática - Informática e Serviços</title>
   <style>
     * {
       margin: 0;
@@ -64,7 +63,7 @@
     }
 
     .hero {
-      background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+      background: url('https://i.imgur.com/fO1VAD2.png') no-repeat center center/cover;
       height: 400px;
       display: flex;
       align-items: center;
@@ -230,7 +229,6 @@
       color: #f0a500;
     }
 
-    /* Menu responsivo */
     @media (max-width: 768px) {
       nav ul {
         flex-direction: column;
@@ -265,11 +263,129 @@
       display: none;
       color: white;
     }
+
+    .gallery-item {
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+  }
+
+  .gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.05);
+  }
+.gallery-item {
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Modal style */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.85);
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 0 12px #000;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close:hover {
+  color: #bbb;
+}
+
   </style>
-  <!-- Ícones FontAwesome para redes sociais -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<script>
+  const modal = document.getElementById('imageModal');
+  const modalImg = document.getElementById('modalImage');
+  const closeBtn = document.querySelector('.close');
+
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const src = item.getAttribute('data-src');
+      modalImg.src = src;
+      modal.style.display = "flex";
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = "none";
+    modalImg.src = "";
+  });
+
+  window.addEventListener('click', e => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+      modalImg.src = "";
+    }
+  });
+
+  window.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      modal.style.display = "none";
+      modalImg.src = "";
+    }
+  });
+</script>
 
 <header>
   <div class="logo" tabindex="0">Stargames Informática</div>
@@ -284,81 +400,80 @@
 </header>
 
 <main>
-  <section class="hero" role="banner">
-    <h1>Seu Parceiro em Informática e Manutenção</h1>
-  </section>
+  <section class="hero" role="banner"></section>
 
   <section id="services">
     <h2 style="text-align:center; margin-bottom: 30px; color:#0b3d91;">Nossos Serviços</h2>
     <div class="services">
-      <article class="service-card" tabindex="0">
-        <h3>Manutenção de Computadores</h3>
-        <p>Conserto de hardware, limpeza interna e upgrade de componentes para desempenho máximo.</p>
-      </article>
-
-      <article class="service-card" tabindex="0">
-        <h3>Suporte Técnico Remoto</h3>
-        <p>Assistência rápida e eficiente via acesso remoto para resolver problemas sem sair de casa.</p>
-      </article>
-
-      <article class="service-card" tabindex="0">
-        <h3>Instalação de Redes</h3>
-        <p>Configuração e otimização de redes domésticas e empresariais para internet estável e segura.</p>
-      </article>
-
-      <article class="service-card" tabindex="0">
-        <h3>Consultoria em TI</h3>
-        <p>Planejamento e implementação de soluções tecnológicas personalizadas para seu negócio.</p>
-      </article>
-
-      <article class="service-card" tabindex="0">
-        <h3>Recuperação de Dados</h3>
-        <p>Recuperamos arquivos perdidos ou corrompidos de HDs, SSDs e dispositivos móveis.</p>
-      </article>
-
-      <article class="service-card" tabindex="0">
-        <h3>Venda e Montagem de PCs</h3>
-        <p>Montamos computadores personalizados de acordo com sua necessidade e orçamento.</p>
-      </article>
+      <article class="service-card"><h3>Manutenção de Computadores</h3><p>Conserto de hardware, limpeza interna e upgrade de componentes para desempenho máximo.</p></article>
+      <article class="service-card"><h3>Suporte Técnico Remoto</h3><p>Assistência rápida e eficiente via acesso remoto para resolver problemas sem sair de casa.</p></article>
+      <article class="service-card"><h3>Instalação de Redes</h3><p>Configuração e otimização de redes domésticas e empresariais para internet estável e segura.</p></article>
+      <article class="service-card"><h3>Consultoria em TI</h3><p>Planejamento e implementação de soluções tecnológicas personalizadas para seu negócio.</p></article>
+      <article class="service-card"><h3>Recuperação de Dados</h3><p>Recuperamos arquivos perdidos ou corrompidos de HDs, SSDs e dispositivos móveis.</p></article>
+      <article class="service-card"><h3>Venda e Montagem de PCs</h3><p>Montamos computadores personalizados de acordo com sua necessidade e orçamento.</p></article>
     </div>
   </section>
 
-  <section id="about" class="about" role="region" aria-labelledby="about-title">
-    <h2 id="about-title">Quem Somos</h2>
+<section id="gallery" style="margin: 60px auto; max-width: 1200px; padding: 0 20px;">
+  <h2 style="text-align: center; color: #0b3d91; margin-bottom: 30px;">Conheça Nossa Loja</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px;">
+    <div class="gallery-item" data-src="src/assets/img/1.jpg">
+      <img src="src/assets/img/1.jpg" alt="Foto da loja 1" />
+    </div>
+    <div class="gallery-item" data-src="src/assets/img/2.jpg">
+      <img src="src/assets/img/2.jpg" alt="Foto da loja 2" />
+    </div>
+    <div class="gallery-item" data-src="src/assets/img/3.jpg">
+      <img src="src/assets/img/3.jpg" alt="Foto da loja 3" />
+    </div>
+    <div class="gallery-item" data-src="src/assets/img/4.jpg">
+      <img src="src/assets/img/4.jpg" alt="Foto da loja 4" />
+    </div>
+    <div class="gallery-item" data-src="src/assets/img/5.jpg">
+      <img src="src/assets/img/5.jpg" alt="Foto da loja 5" />
+    </div>
+    <div class="gallery-item" data-src="src/assets/img/6.jpg">
+      <img src="src/assets/img/6.jpg" alt="Foto da loja 6" />
+    </div>
+    <div class="gallery-item" data-src="src/assets/img/7.jpg">
+      <img src="src/assets/img/7.jpg" alt="Foto da loja 7" />
+    </div>
+    <div class="gallery-item" data-src="src/assets/img/8.jpg">
+      <img src="src/assets/img/8.jpg" alt="Foto da loja 8" />
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div id="imageModal" class="modal" style="display: none;">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
+
+
+
+  <section id="about" class="about">
+    <h2>Quem Somos</h2>
     <p>Stargames Informática - Loja de informática em Itapira, São Paulo.</p>
     <p>4,7143 avaliações no Google</p>
     <p>Opções de serviço: Serviços de reparos · Agendamento on-line · Tem reciclagem de eletrônicos</p>
-    <p class="contact-info">
-      Endereço: Av. Rio Branco, 637 - Centro, Itapira - SP, 13970-070<br />
-      Telefone: (19) 3640-0076<br />
-      Horário de funcionamento: Aberto ⋅ Fecha às 17:30
-    </p>
-
-    <div class="social-links" aria-label="Redes sociais">
-      <a href="https://www.facebook.com/stargamesinformatica/?locale=pt_BR" target="_blank" rel="noopener" aria-label="Facebook Stargames Informática">
-        <i class="fab fa-facebook-square"></i>
-      </a>
-      <a href="https://www.instagram.com/stargamesitapira/" target="_blank" rel="noopener" aria-label="Instagram Stargames Informática">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://api.whatsapp.com/send/?phone=19993262389&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" aria-label="WhatsApp Stargames Informática">
-        <i class="fab fa-whatsapp"></i>
-      </a>
+    <p class="contact-info">Endereço: Av. Rio Branco, 637 - Centro, Itapira - SP, 13970-070<br>Telefone: (19) 3640-0076<br>Horário de funcionamento: Aberto ⋅ Fecha às 17:30</p>
+    <div class="social-links">
+      <a href="https://www.facebook.com/stargamesinformatica/?locale=pt_BR" target="_blank"><i class="fab fa-facebook-square"></i></a>
+      <a href="https://www.instagram.com/stargamesitapira/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://api.whatsapp.com/send/?phone=19993262389&text&type=phone_number&app_absent=0" target="_blank"><i class="fab fa-whatsapp"></i></a>
     </div>
   </section>
 
-  <section id="contact" role="region" aria-labelledby="contact-title">
-    <h2 id="contact-title">Contato</h2>
-    <form id="contact-form" aria-label="Formulário de contato">
+  <section id="contact">
+    <h2>Contato</h2>
+    <form id="contact-form">
       <label for="name">Nome:</label>
       <input type="text" id="name" name="name" required />
-      
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required />
-      
       <label for="message">Mensagem:</label>
       <textarea id="message" name="message" required rows="5"></textarea>
-      
       <button type="submit">Enviar</button>
     </form>
     <p id="form-status">Mensagem enviada com sucesso!</p>
@@ -368,13 +483,11 @@
 <footer>
   <div class="footer-content">
     &copy; 2025 Stargames Informática. Todos os direitos reservados.
-    <div class="contact-footer">
-      Endereço: Av. Rio Branco, 637 - Centro, Itapira - SP, 13970-070 | Tel: (19) 3640-0076
-    </div>
-    <div class="social-footer" aria-label="Redes sociais no rodapé">
-      <a href="https://www.facebook.com/stargamesinformatica/?locale=pt_BR" target="_blank" rel="noopener" aria-label="Facebook Stargames Informática"><i class="fab fa-facebook-square"></i></a>
-      <a href="https://www.instagram.com/stargamesitapira/" target="_blank" rel="noopener" aria-label="Instagram Stargames Informática"><i class="fab fa-instagram"></i></a>
-      <a href="https://api.whatsapp.com/send/?phone=19993262389&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" aria-label="WhatsApp Stargames Informática"><i class="fab fa-whatsapp"></i></a>
+    <div class="contact-footer">Endereço: Av. Rio Branco, 637 - Centro, Itapira - SP, 13970-070 | Tel: (19) 3640-0076</div>
+    <div class="social-footer">
+      <a href="https://www.facebook.com/stargamesinformatica/?locale=pt_BR" target="_blank"><i class="fab fa-facebook-square"></i></a>
+      <a href="https://www.instagram.com/stargamesitapira/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://api.whatsapp.com/send/?phone=19993262389&text&type=phone_number&app_absent=0" target="_blank"><i class="fab fa-whatsapp"></i></a>
     </div>
   </div>
 </footer>
@@ -398,7 +511,39 @@
       status.style.display = 'none';
     }, 4000);
   });
-</script>
 
+    document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    const closeBtn = document.querySelector('.close');
+
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const src = item.getAttribute('data-src');
+        modalImg.src = src;
+        modal.style.display = "flex";
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = "none";
+      modalImg.src = "";
+    });
+
+    window.addEventListener('click', e => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+        modalImg.src = "";
+      }
+    });
+
+    window.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        modal.style.display = "none";
+        modalImg.src = "";
+      }
+    });
+  });
+</script>
 </body>
 </html>
