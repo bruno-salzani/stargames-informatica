@@ -6,8 +6,6 @@ Este projeto tem como objetivo desenvolver um site institucional para a **Starga
 ### Demonstração
 Para acessar a demonstração do projeto <a href="https://minifycss.netlify.app/" target="_blank">Clique aqui</a>
 
-![Preview do Projeto](/src/assets/img/preview2.png)
-
 ---
 
 ## Stargames Informática
