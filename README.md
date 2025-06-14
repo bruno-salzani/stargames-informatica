@@ -4,7 +4,7 @@
 Este projeto tem como objetivo desenvolver um site institucional para a **Stargames Informática**, uma loja especializada em serviços de informática localizada em Itapira/SP. O site apresenta os principais serviços oferecidos, informações de contato, localização e imagens da loja.
 
 ### Demonstração
-Para acessar a demonstração do projeto <a href="https://minifycss.netlify.app/" target="_blank">Clique aqui</a>
+Para acessar a demonstração do projeto <a href="https://stargames-informatica.netlify.app/" target="_blank">Clique aqui</a>
 
 ---
 
