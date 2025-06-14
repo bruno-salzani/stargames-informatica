@@ -1,91 +1,62 @@
-# Clínica Nova Vida
-
 ## Projeto
 
 ### Descrição
-Este projeto apresenta a estrutura e os serviços oferecidos pela **Clínica Nova Vida**, uma instituição especializada no tratamento masculino de alcoolismo, dependência química e depressão. O tratamento é realizado por uma equipe multidisciplinar com foco na transformação comportamental, essencial para a recuperação duradoura do paciente.
+Este projeto tem como objetivo desenvolver um site institucional para a **Stargames Informática**, uma loja especializada em serviços de informática localizada em Itapira/SP. O site apresenta os principais serviços oferecidos, informações de contato, localização e imagens da loja.
 
 ### Demonstração
-Para acessar a demonstração do projeto <a href="https://clinica-novavida.netlify.app/" target="_blank">Clique aqui</a>
+Para acessar a demonstração do projeto <a href="https://minifycss.netlify.app/" target="_blank">Clique aqui</a>
 
+![Preview do Projeto](/src/assets/img/preview2.png)
 
-## Tratamento
+---
 
-### Estrutura do Tratamento
-O tratamento tem duração de **6 meses**, dividido em 3 fases de 2 meses:
+## Stargames Informática
 
-- **Fase 1:** Desintoxicação física e mental
-- **Fase 2:** Terapia intensiva e reestruturação emocional
-- **Fase 3:** Preparação para reintegração social, familiar e profissional
+### Nossos Serviços
 
-Durante todas as fases, o paciente conta com acompanhamento médico, psicológico, terapêutico e suporte nutricional.
+#### Manutenção de Computadores
+Conserto de hardware, limpeza interna e upgrade de componentes para desempenho máximo.
 
-## Serviços Oferecidos
+#### Suporte Técnico Remoto
+Assistência rápida e eficiente via acesso remoto para resolver problemas sem sair de casa.
 
-### Equipe Técnica
-- **Médico Clínico Geral:** 2x por semana e plantão
-- **Psicólogas:** Sessões semanais (seg, qua, qui e sex)
-- **Terapeutas:** 12 Passos, TRE, PPR e TCC
-- **Coordenadores:** 24h por dia
-- **Conselheiros:** Apoio 24h
-- **Enfermagem:** 24h por dia
-- **Nutricionista:** Planejamento alimentar completo
+#### Instalação de Redes
+Configuração e otimização de redes domésticas e empresariais para internet estável e segura.
 
-### Estrutura Física
-- **Quartos:** Suítes com TV
-- **Refeições:** 4 por dia (café da manhã, almoço, café da tarde e jantar)
-- **Lavanderia:** Funcionamento diário
-- **Lazer e Esporte:** Piscina, campo de futebol de areia, academia e lago para pesca
-- **Espiritualidade:** Atividades 2x ao dia, todos os dias
+#### Consultoria em TI
+Planejamento e implementação de soluções tecnológicas personalizadas para seu negócio.
 
-## Investimento
+#### Recuperação de Dados
+Recuperamos arquivos perdidos ou corrompidos de HDs, SSDs e dispositivos móveis.
 
-O valor do tratamento é acordado conforme o caso. O investimento inclui:
+#### Venda e Montagem de PCs
+Montamos computadores personalizados de acordo com sua necessidade e orçamento.
 
-- Acomodação confortável com beliches, armários individuais e banheiro privativo
-- Alimentação e estrutura completa
-- Atendimento médico e terapêutico
+---
 
-### Transporte
-Serviço de remoção opcional, com equipe especializada composta por motorista e 3 socorristas treinados. O valor é calculado conforme a localidade.
+### Quem Somos
+**Stargames Informática**  
+Loja de informática em Itapira, São Paulo.  
+⭐ 4,7/5 avaliações no Google
 
-## Admissão do Paciente
+**Opções de serviço:**  
+- Serviços de reparos  
+- Agendamento on-line  
+- Reciclagem de eletrônicos  
 
-### Documentos
-- RG e CPF ou CNH (paciente e responsável)
-- Cartão do SUS
-- Comprovante de residência
+📍 Endereço: Av. Rio Branco, 637 - Centro, Itapira - SP, 13970-070  
+📞 Telefone: (19) 3640-0076  
+🕒 Horário de funcionamento: Aberto ⋅ Fecha às 17:30
 
-### Enxoval
-- 5 cuecas
-- 3 pares de meias
-- 5 bermudas
-- 2 calças
-- 2 blusas de frio
-- 1 chinelo
+---
 
-### Roupa de Cama
-- 2 lençóis com elástico
-- 1 travesseiro
-- 2 cobertores
+### Contato
 
-### Itens de Higiene
-- Escova e pasta de dente
-- Shampoo
-- Sabonete + saboneteira
-- Creme corporal (opcional)
-- Repelente
+- [Facebook](https://www.facebook.com/stargamesinformatica/?locale=pt_BR)
+- [Instagram](https://www.instagram.com/stargamesitapira/)
+- [WhatsApp](https://api.whatsapp.com/send/?phone=19993262389&text&type=phone_number&app_absent=)
 
-### Lavanderia
-- 2 sabões em pó
-- 2 amaciantes
-- 1 água sanitária
+---
 
-### Opcional
-- Ventilador (modelo livre)
-
-## Contato
-
-**Clínica Nova Vida**  
-📍 Via Martim Lutéro, Km 03, Bairro dos Pires, Limeira - SP  
-📞 (19) 996xx-xxxx  
+© 2025 Stargames Informática. Todos os direitos reservados.  
+Endereço: Av. Rio Branco, 637 - Centro, Itapira - SP, 13970-070 | Tel: (19) 3640-0076
