@@ -10,28 +10,6 @@ Para acessar a demonstração do projeto <a href="https://stargames-informatica.
 
 ## Stargames Informática
 
-### Nossos Serviços
-
-#### Manutenção de Computadores
-Conserto de hardware, limpeza interna e upgrade de componentes para desempenho máximo.
-
-#### Suporte Técnico Remoto
-Assistência rápida e eficiente via acesso remoto para resolver problemas sem sair de casa.
-
-#### Instalação de Redes
-Configuração e otimização de redes domésticas e empresariais para internet estável e segura.
-
-#### Consultoria em TI
-Planejamento e implementação de soluções tecnológicas personalizadas para seu negócio.
-
-#### Recuperação de Dados
-Recuperamos arquivos perdidos ou corrompidos de HDs, SSDs e dispositivos móveis.
-
-#### Venda e Montagem de PCs
-Montamos computadores personalizados de acordo com sua necessidade e orçamento.
-
----
-
 ### Quem Somos
 **Stargames Informática**  
 Loja de informática em Itapira, São Paulo.  
