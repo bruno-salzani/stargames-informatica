@@ -265,11 +265,11 @@
     }
 
     .gallery-item {
-  display: block;
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+      display: block;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
   }
 
   .gallery-item img {
@@ -372,7 +372,18 @@
   <section id="services">
     <h2 style="text-align:center; margin-bottom: 30px; color:#0b3d91;">Nossos Serviços</h2>
     <div class="services">
-      <article class="service-card"><h3>Venda e Montagem de PCs Gamer</h3><p>Montamos computadores personalizados de acordo com sua necessidade e orçamento.</p></article>
+      <a href="loja.html" style="text-decoration: none;">
+        <article class="service-card" style="
+          background: linear-gradient(135deg, #e60000, #000);
+          color: white;
+          box-shadow: 0 8px 20px rgba(230, 0, 0, 0.5);
+          transition: transform 0.3s, box-shadow 0.3s;
+          cursor: pointer;
+        ">
+          <h3 style="color: #fff;">🔥 Venda e Montagem de PCs Gamer 🔥</h3>
+          <p style="color: #ddd;">Monte seu PC com a gente! Alta performance, garantia e suporte profissional.</p>
+        </article>
+      </a>
       <article class="service-card"><h3>Venda de Consoles</h3><p>Vendemos consoles novos e seminovos: PS2, PS3, PS4, PS5, Xbox 360, Xbox One, Xbox Series e consoles Nintendo.</p></article>
       <article class="service-card"><h3>Manutenção de Computadores</h3><p>Conserto de hardware, limpeza interna e upgrade de componentes para desempenho máximo.</p></article>
       <article class="service-card"><h3>Assistência Técnica em Consoles e Joysticks</h3><p>Atendimento rápido e eficiente para diagnóstico e solução de problemas em videogames e controles.</p></article>
